@@ -26,14 +26,14 @@
 	<ion-pane>
 	  <ion-header-bar class="bar-calm" align-title="center">
 		<h1 class="title">myTodo</h1>
-		<button class="btn" ng-click="addItem()"> Add</button>
+		<button class="btn button-icon ion-plus-round" ng-click="addItem()"> </button>
 	  </ion-header-bar>
 
 	  <ion-content>
 		<ion-list>
 		  <ion-item ng-repeat="item in items" ng-class="{purchased: item.status == 'purchased'}">
 		  	{{item.name}}
-		  	<ion-option-button class="button-energized" ng-click="purchaseItem(item)"> Done</ion-option-button>
+		  	<ion-option-button class="button-energized " ng-click="purchaseItem(item)"> <i class="ion-checkmark-round"></i></ion-option-button>
 		  </ion-item>
 		</ion-list>
 
