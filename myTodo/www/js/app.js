@@ -5,13 +5,23 @@
 // the 2nd parameter is an array of 'requires'
 angular.module('starter', ['ionic'])
 
-.controller('ListCtrl', function($scope){
+.controller('ListCtrl', function($scope, $ionicListDelegate){
   console.log("lorem");
   $scope.items = [];
 
   $scope.addItem = function(){
+    var name = prompt("Add Task");
+    if(name){
+      $scope.items.push({'name': name});
+    }
+  };
+
+  $scope.purchaseItem = function(item){
     console.log("lorem");
-  }
+    $scope.item = item;
+    $scope.item['status'] = 'purchased';
+    $ionicListDelegate.closeOptionButtons();
+  };
 
 })
 

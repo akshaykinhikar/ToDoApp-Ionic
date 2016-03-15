@@ -33,6 +33,7 @@
 		<ion-list>
 		  <ion-item ng-repeat="item in items">
 		  	{{item.name}}
+		  	<ion-option-button class="button-energized" ng-click="purchaseItem(item)"> Buy</ion-option-button>
 		  </ion-item>
 		</ion-list>
 
