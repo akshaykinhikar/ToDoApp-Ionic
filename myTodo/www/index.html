@@ -31,9 +31,9 @@
 
 	  <ion-content>
 		<ion-list>
-		  <ion-item ng-repeat="item in items">
+		  <ion-item ng-repeat="item in items" ng-class="{purchased: item.status == 'purchased'}">
 		  	{{item.name}}
-		  	<ion-option-button class="button-energized" ng-click="purchaseItem(item)"> Buy</ion-option-button>
+		  	<ion-option-button class="button-energized" ng-click="purchaseItem(item)"> Done</ion-option-button>
 		  </ion-item>
 		</ion-list>
 
