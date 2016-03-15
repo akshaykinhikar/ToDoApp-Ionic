@@ -5,6 +5,16 @@
 // the 2nd parameter is an array of 'requires'
 angular.module('starter', ['ionic'])
 
+.controller('ListCtrl', function($scope){
+  console.log("lorem");
+  $scope.items = [];
+
+  $scope.addItem = function(){
+    console.log("lorem");
+  }
+
+})
+
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     if(window.cordova && window.cordova.plugins.Keyboard) {
